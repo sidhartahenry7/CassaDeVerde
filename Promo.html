@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form UI</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid black;
+      text-align: center;
+      padding: 8px;
+      color: black;
+    }
+
+    body {
+      background-color: #f7f8f8;
+    }
+
+    #sidebar {
+      background-color: #0b2357;
+    }
+
+    .form-control {
+      border: 1px solid black;
+    }
+
+    .spek {
+      text-align: left;
+    }
+
+    label {
+      color: black;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+        <div class="custom-menu">
+          <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle Menu</span>
+          </button>
+        </div>
+        <div class="p-4 pt-5">
+          <img src="images/Logo-Cassa.png" width="200" height="100" style="object-fit: scale-down;">
+          <br>
+          <ul class="list-unstyled components mb-5">
+            <li>
+              <a href="Cabang.html">Cabang</a>
+            </li>
+            <li>
+              <a href="Pegawai.html">Pegawai</a>
+            </li>
+            <li>
+              <a href="JadwalKerjaPegawai.html">Jadwal Kerja Pegawai</a>
+            </li>
+            <li>
+              <a href="Absensi.html">Absensi</a>
+            </li>
+            <li>
+              <a href="Gaji.html">Gaji</a>
+            </li>
+            <li>
+              <a href="Transaksi.html">Transaksi</a>
+            </li>
+            <li>
+              <a href="Antrian.html">Antrian</a>
+            </li>
+            <li>
+              <a href="Pelanggan.html">Pelanggan</a>
+            </li>
+            <li>
+              <a href="Produk.html">Produk</a>
+            </li>
+            <li class="active">
+              <a href="Promo.html">Promo</a>
+            </li>
+            <br>
+            <button type="button" class="btn btn-danger"  onclick="window.location.href='login.html'">
+            <i class="fa fa-lock"> LogOut</i>
+            </button>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <div class="iq-card">
+                <div class="iq-card-header d-flex justify-content-between">
+                  <div class="iq-header-title">
+                    <h4 class="card-title">Promo</h4>
+                  </div>
+                </div>
+                <hr style="height: 10px;">
+                <div class="iq-card-body">
+                  <form>
+                    <div class="form-group">
+                      <label style="color: black; font-weight: bold;" for="text">ID Promo</label>
+                      <input type="text" class="form-control" id="IDproduk" />
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label for="text">Tanggal Mulai</label>
+                                <br>
+                                <input type="date" class="form-control" id="tanggalMulai" />
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="text">Tanggal Berakhir</label>
+                                <br>
+                                <input type="date" class="form-control" id="tanggalBerakhir" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="text">Potongan</label>
+                      <input type="number" class="form-control" id="potongan" />
+                    </div>
+                    
+                    <button type="cancel" class="btn btn-danger">
+                      Cancel
+                    </button>
+                    <button type="submit" class="btn" style="background-color: #29a4da; color: white;">
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <br>
+              <!--Tabel-->
+              <table>
+                <tr>
+                  <th>ID Promo</th>
+                  <th>Tanggal Mulai</th>
+                  <th>Tanggal Berakhir</th>
+                  <th>Potongan</th>
+                </tr>
+                <tr>
+                  <td>PRD98</td>
+                  <td>dd/mm/yy</td>
+                  <td>dd/mm/yy</td>
+                  <td>22000</td>
+                </tr>
+                <tr>
+                  <td>PRD98</td>
+                  <td>dd/mm/yy</td>
+                  <td>dd/mm/yy</td>
+                  <td>25000</td>
+                </tr>
+            </table>
+      </div>
+
+  
+      
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

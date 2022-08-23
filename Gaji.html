@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form UI</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid black;
+      text-align: center;
+      padding: 8px;
+      color: black;
+    }
+
+    
+    body {
+      background-color: #f7f8f8;
+    }
+
+    #sidebar {
+      background-color: #0b2357;
+    }
+
+    .form-control {
+      border: 1px solid black;
+    }
+
+    label {
+      color: black;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+        <div class="custom-menu">
+          <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle Menu</span>
+          </button>
+        </div>
+        <div class="p-4 pt-5">
+          <img src="images/Logo-Cassa.png" width="200" height="100" style="object-fit: scale-down;">
+          <br>
+          <ul class="list-unstyled components mb-5">
+            <li>
+              <a href="Cabang.html">Cabang</a>
+            </li>
+            <li>
+              <a href="Pegawai.html">Pegawai</a>
+            </li>
+            <li>
+              <a href="JadwalKerjaPegawai.html">Jadwal Kerja Pegawai</a>
+            </li>
+            <li>
+              <a href="Absensi.html">Absensi</a>
+            </li>
+            <li class="active">
+              <a href="Gaji.html">Gaji</a>
+            </li>
+            <li>
+              <a href="Transaksi.html">Transaksi</a>
+            </li>
+            <li>
+              <a href="Antrian.html">Antrian</a>
+            </li>
+            <li>
+              <a href="Pelanggan.html">Pelanggan</a>
+            </li>
+            <li>
+              <a href="Produk.html">Produk</a>
+            </li>
+            <li>
+              <a href="Promo.html">Promo</a>
+            </li>
+            <br>
+            <button type="button" class="btn btn-danger"  onclick="window.location.href='login.html'">
+            <i class="fa fa-lock"> LogOut</i>
+            </button>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <div class="iq-card">
+                <div class="iq-card-header d-flex justify-content-between">
+                  <div class="iq-header-title">
+                    <h4 class="card-title">Gaji</h4>
+                  </div>
+                </div>
+                <hr style="height: 10px;">
+                <div class="iq-card-body">
+                  <form>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <label for="date">Tanggal Masuk</label>
+                          <br>
+                          <input type="date" class="form-control" id="tanggalMasuk" />
+                        </div>
+                      </div>
+                    </div>
+                    <button type="cancel" class="btn btn-danger">
+                      Cancel
+                    </button>
+                    <button type="submit" class="btn" style="background-color: #29a4da; color: white;">
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <br>
+              <!--Tabel-->
+              <table>
+                <tr>
+                  <th>ID Pegawai</th>
+                  <th>Tanggal</th>
+                  <th>Pegawai</th>
+                  <th>Hari Masuk</th>
+                  <th>Hari Terlambat</th>
+                  <th>Gaji Pokok</th>
+                  <th>Bonus</th>
+                  <th>Potongan</th>
+                  <th>Total Gaji</th>
+                </tr>
+                <tr>
+                  <td>dd/mm/yy</td>
+                  <td>Budi</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>500000</td>
+                  <td>300000</td>
+                  <td>
+                      100000 
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" style="height: 30px; font-size: small; padding: 5px; margin-left: 5px;">Edit</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Edit Bonus</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                              </div>
+                              <div class="modal-body">
+                              <form>
+                                  <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Bonus:</label>
+                                    <br>
+                                    <input type="text" id="recipient-name">
+                                  </div>
+                              </form>
+                              </div>
+                              <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-primary">Confirm</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </td>
+                  <td>2800000</td>
+                  <td>1000000</td>
+                </tr>
+                <tr>
+                  <td>dd/mm/yy</td>
+                  <td>Rony</td>
+                  <td>5</td>
+                  <td>2</td>
+                  <td>500000</td>
+                  <td>300000</td>
+                  <td>
+                      100000 
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" style="height: 30px; font-size: small; padding: 5px; margin-left: 5px;">Edit</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Edit Bonus</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                              </div>
+                              <div class="modal-body">
+                              <form>
+                                  <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Bonus:</label>
+                                    <br>
+                                    <input type="text" id="recipient-name">
+                                  </div>
+                              </form>
+                              </div>
+                              <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-primary">Confirm</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </td>
+                  <td>2800000</td>
+                  <td>1000000</td>
+                </tr>
+            </table>
+      </div>
+      
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
